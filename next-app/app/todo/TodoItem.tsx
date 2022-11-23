@@ -1,12 +1,12 @@
-import { component$, QRL } from "@builder.io/qwik";
-import { ItemType } from ".";
+import { Dispatch, SetStateAction } from "react";
+import { ItemType } from "./page";
 
 interface TodoItemProps {
     item: ItemType,
-    items?: ItemType[]
+    setItems: Dispatch<SetStateAction<ItemType[]>>
 }
 
-const TodoItem = component$<TodoItemProps>(({ item, items }) => {
+const TodoItem = ({ item, setItems }: TodoItemProps) => {
     console.log(`render TodoItem ${item.id}`)
 
     const doThing = () => {
@@ -17,11 +17,10 @@ const TodoItem = component$<TodoItemProps>(({ item, items }) => {
     return (
         <li>
             {/* <button style={{ "margin-right": "1em"}} onClick$={() => onDelete(item.id)}>Delete</button> */}
-            <button style={{ "margin-right": "1em"}} onClick$={() => items?.splice(items.findIndex(it => it.id === item.id), 1)}>Delete</button>
+            <button style={{ marginRight: "1em"}} onClick={() => setItems((prev) => prev.filter(it => it.id !== item.id))}>Delete</button>
            {`${item.item} ${doThing()}`}
         </li>
     )
-
-})
+}
 
 export default TodoItem

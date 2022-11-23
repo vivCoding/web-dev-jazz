@@ -1,4 +1,4 @@
-import { Component, Setter } from "solid-js"
+import { Component } from "solid-js"
 
 interface CounterDisplayProps {
     countValue: number,
@@ -14,8 +14,8 @@ const CounterDisplay: Component<CounterDisplayProps> = (props) => {
 
     return (
         <div>
-            <p>{Math.random().toString(36).slice(2)}, {props.countValue} {doThing(1)}</p>
-            <p>{`${Math.random().toString(36).slice(2)} + ${props.countValue} ${doThing(2)}`}</p>
+            <p>same element: {props.countValue} {doThing(1)}</p>
+            <p>same string: {`${props.countValue} ${doThing(2)}`}</p>
         </div>
     )
 }

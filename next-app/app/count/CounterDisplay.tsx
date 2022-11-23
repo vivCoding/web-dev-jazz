@@ -1,11 +1,8 @@
-import { component$ } from "@builder.io/qwik";
-
 interface CounterDisplayProps {
-    countValue: number
+    countValue: number,
 }
 
-
-const CounterDisplay = component$<CounterDisplayProps>(({ countValue }) => {
+const CounterDisplay = ({ countValue }: CounterDisplayProps) => {
     console.log("rendering CounterDisplay")
 
     const doThing = (p: number) => {
@@ -19,6 +16,7 @@ const CounterDisplay = component$<CounterDisplayProps>(({ countValue }) => {
             <p>same string: {`${countValue} ${doThing(2)}`}</p>
         </div>
     )
-})
+}
 
 export default CounterDisplay
+  

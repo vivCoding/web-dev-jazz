@@ -5,7 +5,7 @@ interface AddInputProps {
 }
 
 const AddInput = component$<AddInputProps>(({ onAddNew$ }) => {
-    // console.log("rendering AddInput")
+    console.log("rendering AddInput")
     const newItem = useSignal("")
 
     const handleAdd = $(() => {
@@ -16,7 +16,7 @@ const AddInput = component$<AddInputProps>(({ onAddNew$ }) => {
     })
 
     const doThing = () => {
-        // console.log("rerendered addInput")
+        console.log("rerendered addInput")
         return ""
     }
 

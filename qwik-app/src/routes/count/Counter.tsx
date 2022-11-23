@@ -2,12 +2,12 @@ import { component$, useSignal } from '@builder.io/qwik';
 import CounterDisplay from './CounterDisplay';
 
 const Counter = component$(() => {
-    // console.log("rendering Counter")
+    console.log("rendering Counter")
     const count = useSignal(0)
     const addValue = useSignal<number>(0)
 
     const doThing = (id: number) => {
-        // console.log(`rerendered b${id}`)
+        console.log(`rerendered b${id}`)
         return ""
     }
 

@@ -2,21 +2,21 @@
 
 idek how to benchmark stuff
 
-also testing how different frameworks rerender based on state changes
+also testing how different frameworks granularly rerender based on state changes
 
 ## using
 TS and routing lib (with basic ssr)
 - SolidJS + SolidStart
 - Qwik + Qwik City
-- React + NextJS
+- React + NextJS (v13, with `appDir` feature on)
 
 ## doing
 multiple pages with SSR
 - basic index page with no interactivity
 - counter page
     - countValue passed down to child
-        - RNG call + countValue (in same element)
-        - RNG call + countValue (in same string)
+        - consoleLog + countValue (in same element)
+        - consoleLog + countValue (in same string)
 - todo list
     - adding item uses handler passed down by props
     - modifying item uses handler passed down by props
@@ -24,5 +24,6 @@ multiple pages with SSR
 
 
 ## remarks
+
 jazz
 

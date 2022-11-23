@@ -1,10 +1,10 @@
 import { Component } from "solid-js";
 import { SetStoreFunction } from "solid-js/store";
-import { ItemType } from "~/routes/todo";
+import { ItemType } from "~/routes/(index)/todo";
 
 interface TodoItemProps {
     item: ItemType,
-    onDelete: (val: number) => void,
+    onDelete?: (val: number) => void,
     setItems?: SetStoreFunction<ItemType[]>
 }
 

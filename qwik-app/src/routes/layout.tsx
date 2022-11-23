@@ -2,7 +2,7 @@ import { component$, Slot } from '@builder.io/qwik';
 import { DocumentHead, Link } from '@builder.io/qwik-city';
 
 export default component$(() => {
-  // console.log("rendering layout")
+  console.log("rendering layout")
 
   return (
     <>

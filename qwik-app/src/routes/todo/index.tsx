@@ -9,7 +9,7 @@ export interface ItemType {
 }
 
 export default component$(() => {
-    // console.log("rendering todo")
+    console.log("rendering todo")
     const items = useStore<ItemType[]>([
         { id: 1, item: "do work"},
         { id: 2, item: "do stuff"},
@@ -30,7 +30,7 @@ export default component$(() => {
     })
 
     const doThing = (idx: number) => {
-        // console.log("rendering item", idx, "in loop")
+        console.log("rendering item", idx, "in loop")
         return ""
     }
 

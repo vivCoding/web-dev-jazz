@@ -25,9 +25,6 @@ export default function Root() {
       <Body>
         <Suspense>
           <ErrorBoundary>
-              <A href="/">Home</A>{' '}
-              <A href="/count">Counter</A>{' '}
-              <A href="/todo">Todo</A>
             <Routes>
               <FileRoutes />
             </Routes>

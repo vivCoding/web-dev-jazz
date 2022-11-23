@@ -47,7 +47,8 @@ export default function Todo() {
                 <For each={items}>
                     {(item, idx) => {
                         doThing(idx())
-                        return <TodoItem item={item} onDelete={deleteItem} setItems={setItems}/>
+                        // return <TodoItem item={item} onDelete={deleteItem} setItems={setItems}/>
+                        return <TodoItem item={item} setItems={setItems}/>
                     }}
                 </For>
             </ol>

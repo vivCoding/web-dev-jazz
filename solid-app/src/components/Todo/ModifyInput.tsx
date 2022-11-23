@@ -1,11 +1,9 @@
 import { Component, createSignal, JSX } from "solid-js";
-import { SetStoreFunction } from "solid-js/store";
-import { ItemType } from "~/routes/todo";
+import { ItemType } from "~/routes/(index)/todo";
 
 interface ModifyInputProps {
     onModify: (id: number, newItem: string) => void,
     items: ItemType[],
-    setItems?: SetStoreFunction<ItemType[]>
 }
 
 const ModifyItem: Component<ModifyInputProps> = (props) => {

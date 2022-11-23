@@ -7,7 +7,7 @@ interface ModifyItemProps {
 }
 
 const ModifyItem = component$<ModifyItemProps>(({ items, onModify$ }) => {
-    // console.log("rendering ModifyInput")
+    console.log("rendering ModifyInput")
     const idx = useSignal<number>(0)
     const newItem = useSignal("")
 
@@ -24,7 +24,7 @@ const ModifyItem = component$<ModifyItemProps>(({ items, onModify$ }) => {
     })
 
     const doThing = () => {
-        // console.log("rerendered modifyInput")
+        console.log("rerendered modifyInput")
         return ""
     }
 

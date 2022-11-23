@@ -17,9 +17,7 @@ export default function Counter() {
       <button onClick={() => setCount(count() + 1)}>Increment {doThing(1)}</button>
       <button onClick={() => setCount(count() - 1)}>Decrement {doThing(2)}</button>
       <button onClick={() => setCount(0)}>Reset</button>
-      <div style={{
-        "margin-top": "1em",
-      }}>
+      <div style={{ "margin-top": "1em" }}>
         <label>Add value: </label>
         <input type="number" onChange={(e) => setAddValue(e.currentTarget.valueAsNumber)}/>
         <button onClick={() => setCount(count() + addValue())}>Add</button>
