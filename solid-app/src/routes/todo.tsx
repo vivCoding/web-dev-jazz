@@ -42,11 +42,12 @@ export default function Todo() {
             <AddInput onAddNew={addItem} />
             <br></br>
             <ModifyItem items={items} onModify={modifyItem} />
+            {/* <ModifyItem items={items} onModify={modifyItem} setItems={setItems}/> */}
             <ol>
                 <For each={items}>
                     {(item, idx) => {
                         doThing(idx())
-                        return <TodoItem item={item} onDelete={deleteItem}/>
+                        return <TodoItem item={item} onDelete={deleteItem} setItems={setItems}/>
                     }}
                 </For>
             </ol>

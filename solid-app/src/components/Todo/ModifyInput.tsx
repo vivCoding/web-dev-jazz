@@ -1,12 +1,14 @@
 import { Component, createSignal, JSX } from "solid-js";
+import { SetStoreFunction } from "solid-js/store";
 import { ItemType } from "~/routes/todo";
 
-interface AddInputProps {
+interface ModifyInputProps {
     onModify: (id: number, newItem: string) => void,
-    items: ItemType[]
+    items: ItemType[],
+    setItems?: SetStoreFunction<ItemType[]>
 }
 
-const ModifyItem: Component<AddInputProps> = (props) => {
+const ModifyItem: Component<ModifyInputProps> = (props) => {
     console.log("rendering ModifyInput")
     const [idx, setIdx] = createSignal<number>()
     const [newItem, setNewItem] = createSignal("")
@@ -14,6 +16,7 @@ const ModifyItem: Component<AddInputProps> = (props) => {
     const handleModify = () => {
         if (newItem() !== "") {
             props.onModify(idx() - 1, newItem())
+            // props.setItems(idx() - 1, "item", newItem())
         }
     }
 

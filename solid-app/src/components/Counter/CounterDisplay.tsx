@@ -1,7 +1,7 @@
-import { Component } from "solid-js"
+import { Component, Setter } from "solid-js"
 
 interface CounterDisplayProps {
-    countValue: number
+    countValue: number,
 }
 
 const CounterDisplay: Component<CounterDisplayProps> = (props) => {
