@@ -1,23 +1,37 @@
 {
   "name": "solid-app",
+  "type": "module",
   "scripts": {
     "dev": "solid-start dev",
     "build": "solid-start build",
-    "start": "solid-start start"
-  },
-  "type": "module",
-  "devDependencies": {
-    "solid-start-node": "^0.2.0",
-    "typescript": "^4.8.4",
-    "vite": "^3.1.8"
+    "start": "solid-start start",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "prettier": "prettier src --check",
+    "prettier:fix": "prettier src --write"
   },
   "dependencies": {
-    "@solidjs/meta": "^0.28.0",
-    "@solidjs/router": "^0.5.0",
-    "solid-js": "^1.6.0",
-    "solid-start": "^0.2.0",
-    "solid-start-vercel": "0.1.0-alpha.100",
+    "@auth/core": "^0.18.0",
+    "@auth/solid-start": "^0.1.2",
+    "@solidjs/meta": "^0.28.6",
+    "@solidjs/router": "^0.8.3",
+    "@types/node": "^20.8.9",
+    "solid-js": "^1.8.3",
+    "solid-start": "^0.3.8",
     "undici": "^5.11.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "@typescript-eslint/eslint-plugin": "^6.9.0",
+    "@typescript-eslint/parser": "^6.9.0",
+    "eslint": "^8.52.0",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-solid": "^0.13.0",
+    "prettier": "^3.0.3",
+    "solid-start-node": "^0.3.8",
+    "solid-start-vercel": "0.1.0-alpha.100",
+    "typescript": "^4.9.5",
+    "vite": "^4.4.9"
   },
   "engines": {
     "node": ">=16"
